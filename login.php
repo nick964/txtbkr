@@ -5,18 +5,19 @@ try {
 	$error = $e->getMessage();
 }
 
+echo "hello";
 
 session_start();
 $errmsg='';
-		if(isset($_POST['submit'])) {
-		if(empty($_POST['email']) || empty($_POST['password'])) {
+		if(isset($_GET['submit'])) {
+		if(empty($_GET['email']) || empty($_GET['password'])) {
 		$error = "Email or Password is invalid! Please reenter email or Password.";
 		}
 		else 
 		{
 			//define $username and $password
-			$email=$_POST['email'];
-			$password=md5($_POST['password']);
+			$email=$_GET['email'];
+			$password=md5($_GET['password']);
 			//establishing connection with server by passing server_name, username and password
 			
 try 
