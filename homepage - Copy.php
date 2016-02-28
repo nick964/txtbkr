@@ -16,14 +16,11 @@
 	<link href="css/animate.css" rel="stylesheet">
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-	
 			<script>
 		function showUser(str) {
 			var e = document.getElementById("catselect");
 			var cat = e.options[e.selectedIndex].value;
-			var the_data = '?'  + 'q=' + str + '&cat=' + cat;
-			console.log(the_data);
-
+			
 			console.log(cat);
 		    if (str == "") {
 		        document.getElementById("txtHint").innerHTML = "";
@@ -41,9 +38,8 @@
 		                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
 		            }
 		        };
-		       
-		        xmlhttp.open("GET",("getbooks.php?q="+str+"&cat="+cat),true);
-
+		        console.log(str);
+		        xmlhttp.open("GET","getbooks.php?q="+str,true);
 		        xmlhttp.send();
 		    }
 		}
@@ -61,11 +57,11 @@
 
 			</div>
 			<div>
-				<form class="navbar-form navbar-right" role="search">
+				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">
-						<input type="text" class="form-control input-lg smallsearch" placeholder="Search" >
+						<input type="text" size="30" onkeyup="showUser(this.value)">
 					</div>
-					<button type="submit" class="btn btn-default smallsearch" ><img src="http://uxrepo.com/static/icon-sets/linecons/png32/16/000000/search-16-000000.png" class="searchimage"/></button>
+					<button type="submit" class="btn btn-default" ></img></button>
 				</form>
 			</div>
 
@@ -74,32 +70,25 @@
 
 	<div class="container">
 		<div class="row">
+			<div class="col-md-6"><br>
+			<div id="txtHint"><b>Person info will be listed here...</b></div>
+			</div>
 				<br />
 				<div id="custom-search-input">
 					<div class="input-group col-md-12">
-						<input type="text" class="form-control input-lg uneditable-input" placeholder="Search" onkeyup="showUser(this.value)" />
+						<input type="text" class="form-control input-lg" placeholder="Search" />
 						<span class="input-group-btn">
 							<div class="combobox">
-								<select class="form-control-default btn-lg mainsearch" id="catselect">
-									<option value="1">textbook</option>
-									<option value="2">author</option>
-									<option value="3">professor</option>
-									<option value="4">class</option>
-									<option value="5">subject</option>	
+								<select class="form-control-default btn-lg" id="catselect">
+									<option value="1">Textbook Name</option>
+									<option value="2">Author</option>
+									<option value="3">Professor</option>
+									<option value="4">Class</option>
+									<option value="5">Subject</option>	
 								</select>
 							</div>
 						</span>
 					</div>
-				
-
-					
-					
-				
-					</div>
-				</div>
-
-				<div class="col-lg-12">
-				<div id="txtHint"><h1 align="center">enter your criteria to find the book you need.</h1></div>
 				</div>
 			</div>
 		</div>

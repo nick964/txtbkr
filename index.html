@@ -3,11 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>txtbkr</title>
+        <meta name="description" content="textbook exchange web application">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
@@ -50,7 +49,7 @@
                     <div class="form-group">
                       <label class="col-md-4 control-label" for="username"></label>
                       <div class="col-md-4">
-                        <input id="username" name="username" type="text" placeholder="username" class="form-control input-md">
+                        <input id="username" name="username" type="text" placeholder="username" class="form-control input-md textBox" required/>
                         
                       </div>
                     </div>
@@ -59,10 +58,12 @@
                     <div class="form-group">
                       <label class="col-md-4 control-label" for="password"></label>  
                       <div class="col-md-4">
-                      <input id="password" name="password" type="password" placeholder="password" class="form-control input-md"><br>
+                      <input id="password" name="password" type="password" placeholder="password" class="form-control input-md textBox" required/><br>
 
-                          <center><button type="submit" name="submit" id="submit" value="sent" class="btn btn-primary fancyButton">log in</button>
-                          <button type="signup" name="signup" id="signup" class="btn btn-primary fancyButton">sign up</button></center>
+                        <center>
+                            <button type="submit" name="submit" id="submit" value="sent" class="btn btn-primary fancyButton">log in</button>
+                           
+                        </center>
                       </div>
                     </div>
 
@@ -70,6 +71,9 @@
 
 
                     </form>
+                    <center>
+                    <button  class="btn btn-primary fancyButton" onclick="location.href = 'signup.php';">Sign Up</button>
+                    </center>
 
             </div>
         </div>
