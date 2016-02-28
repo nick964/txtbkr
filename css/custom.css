@@ -9,24 +9,25 @@
 }
 
 #logo {
-	margin-left: 10%;
+	margin-left: 20%;
 	text-align: left;
 	font-size: 100%;
 	color: white;
 }
 
-.btn-primary {
-	color: white;
-	background: black;
+#welcome {
+	font-size: 250%;
+	margin-bottom: 30px;
 }
 
-.btn-primary {
+.fancyButton {
+	background: black;
 	position: relative;
 	color: white;
 	border-color: black;
 }
 
-.btn-primary:hover {
+.fancyButton:hover {
 	color: black;
 	border-color: black;
 	background: white;
